@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Spartan", sans-serif;
+}
+
+header {
+  display: flex;
+  min-height: 30vh;
+  justify-content: space-evenly;
+  align-items: center;
+  /* animation: rotation 2s ease-in-out; */
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(1, 1, 1, 360deg);
+  }
+}
+
+@keyframes rotation2 {
+  from {
+    transform: rotate3d(0, 0, 0, 0deg);
+  }
+  to {
+    transform: rotate3d(-1, -1, -1, 360deg);
+  }
+}
+
+header h2 {
+  padding: 2rem;
+  font-size: 3rem;
+}
+
+.cap-ef {
+  font-size: 4rem;
+}
+
+#logo {
+  text-decoration: none;
+  color: black;
+  animation: rotation 2s ease-in-out;
+}
+
+.search-form {
+  padding: 2rem;
+  display: flex;
+  flex-direction: row;
+}
+.search-form input {
+  font-size: 2rem;
+  font-family: "Spartan", sans-serif;
+  padding: 0.5rem;
+  width: 100%;
+  border: none;
+  border: 2px solid #051b25;
+}
+
+.search-form button {
+  border: none;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background: #051b25;
+  color: white;
+  cursor: pointer;
+}
+
+.gallery-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: gray;
+  padding: 1rem 2rem;
+}
+
+.gallery-info a {
+  color: gray;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+  padding: 0rem 1rem;
+  width: 80%;
+  margin: auto;
+  row-gap: 5rem;
+  column-gap: 2rem;
+}
+
+.gallery-img img {
+  width: 25vw;
+  height: 60vh;
+  object-fit: cover;
+}
+
+.img-container {
+  position: relative;
+  display: flex;
+  color: white;
+  overflow: hidden;
+}
+
+.text {
+  border: 1px solid pink;
+  position: absolute;
+  top: 0;
+  width: 25vw;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgb(0, 0, 0, 0.8);
+  opacity: 0;
+  z-index: 1;
+}
+
+.desc {
+  padding: 1rem 1rem;
+}
+.desc a {
+  text-decoration: none;
+  color: red;
+}
+.nav-button {
+  min-height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.more {
+  padding: 1rem 5rem;
+  background: black;
+  border: none;
+  color: white;
+  cursor: pointer;
+  opacity: 1;
+  z-index: 2;
+  border-radius: 10px 10px;
+}
+
+.scrollmagic-pin-spacer {
+  position: static !important;
+  padding: 0;
+}
