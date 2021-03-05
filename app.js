@@ -22,14 +22,18 @@ fotas.addEventListener("click", (e) => {
     if (logoCount % 2 === 0) {
       console.log("even");
       fotas.style.animation = "rotation 2s ease-in-out";
+      setTimeout(() => {
+        fotas.style.animation = "";
+        logoCount++;
+      }, 2000);
     } else {
       console.log("odd");
       fotas.style.animation = "rotation2 2s ease-in-out";
+      setTimeout(() => {
+        fotas.style.animation = "";
+        logoCount++;
+      }, 2000);
     }
-    setTimeout(() => {
-      fotas.style.animation = "";
-      logoCount++;
-    }, 2500);
   }
 });
 
